@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import usePasswordToggle from "../../hooks/functionHooks";
+import usePasswordToggle from "../../hooks/utilityHooks";
 import { Button, Input } from "../forms/FormInput";
 
 interface ILoginFormProps {
@@ -23,7 +23,7 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
           </div>
           <div className={styles["login-form-input"]}>
             <Input type={passwordInputType} placeholder="Password" id="password" />
-            <span>{toggleIcon}</span>
+            {toggleIcon}
           </div>
           <Link to="#">
             <p className={styles["login-form-forgotPassword"]}>
