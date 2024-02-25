@@ -1,0 +1,24 @@
+@import "../../styles/variables.scss";
+@import "../../styles/typography";
+@import "../../styles/mixins.scss";
+
+.container {
+    // height: 100vh;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: center;
+    // align-items: center;
+    @include center-div;
+    height: 100vh;
+    font-family: $primary-font;
+}
+
+.title {
+    @extend .text-lg;
+    color: $green-color;
+}
+
+.description {
+   @extend .text-md;
+   color: $text-primary-color;
+}

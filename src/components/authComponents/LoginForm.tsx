@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import usePasswordToggle from "../../hooks/utilityHooks";
+import { FORGOTPASSWORD } from "../../router/Router";
 import { Button, Input } from "../forms/FormInput";
 
 interface ILoginFormProps {
@@ -25,7 +26,7 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
             <Input type={passwordInputType} placeholder="Password" id="password" />
             {toggleIcon}
           </div>
-          <Link to="#">
+          <Link to={FORGOTPASSWORD}>
             <p className={styles["login-form-forgotPassword"]}>
               FORGOT PASSWORD?
             </p>
