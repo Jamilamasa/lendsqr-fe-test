@@ -28,17 +28,15 @@ import {
 const SideBar: React.FC = () => {
   return (
     <>
-      <div className={styles['sidebar']}>
-        <div className={styles.main__content}>
-          <span>
+        <div className={styles['sidebar']}>
+          <span className={styles['sidebar-switchOrganization']}>
             <img src={briefcase} alt="" width={"16px"} />
             <select>
               <option value="Switch Organization<">Switch Organization</option>
             </select>
           </span>
 
-          <span>
-            {" "}
+          <span className={styles['sidebar-dashBoard']}>
             <img src={home} width={"16px"} alt="" />
             <p>Dashboard</p>
           </span>
@@ -157,9 +155,6 @@ const SideBar: React.FC = () => {
             </ul>
           </section>
         </div>
-
-      
-      </div>
     </>
   );
 };

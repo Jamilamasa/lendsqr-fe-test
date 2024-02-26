@@ -1,34 +1,29 @@
 // Import shared styles and variables
 @import "../../../styles/variables.scss";
-
-// Define mixins
-@mixin FlexRow() {
-  display: flex;
-  align-items: center;
-}
+@import "../../../styles/mixins.scss";
 
 .sidebar {
   display: flex;
-  align-items: flex-start;
-  width: 100vw;
-  position: relative;
-  top: 10vh;
-  overflow-x: auto;
-}
-
-.main__content {
-  display: flex;
   flex-direction: column;
   width: 283px !important;
-  padding: 40px;
+  padding: 20px;
   position: fixed;
   overflow-y: auto;
-  top: 10vh;
+  top: 88px;
   bottom: 0;
   font-family: "Work Sans", sans-serif;
   background-color: white;
   gap: 30px;
   box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+  &-switchOrganization {
+    margin-bottom: 30px;
+    margin-top: 30px;
+  }
+  &-dashBoard {
+    color: $blue-color-transparent;
+    margin-bottom: 30px;
+  }
 
   section {
     h5 {
@@ -44,20 +39,16 @@
         width: 100%;
         margin: 15px 0;
         padding-left: 20px;
-        color: $text-primary-color;
+        color: $blue-color-transparent;
         font-size: 16px;
         padding: 10px 0 10px 20px;
-        @include FlexRow();
+        @include flexbox(row, center, initial);
 
         img {
           width: 16px;
         }
 
-        p {
-          font-size: 16px;
-          color: $text-primary-color;
-          margin-left: 10px;
-        }
+       
       }
     }
   }
@@ -67,18 +58,18 @@
     border: none;
     color: $text-primary-color;
     font-size: 16px;
-    background-image: url("../../assets/global/drop_down_unshaded.svg");
+    background-image: url("../../../assets/icons/global/drop_down_unshaded.svg");
     background-repeat: no-repeat;
     background-position: right 10px center;
     padding-right: 30px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
+ 
   }
 
   span {
-    color: $text-primary-color;
-    @include FlexRow();
+    @include flexbox(row, center, initial);
     gap: 30px;
   }
 
@@ -94,7 +85,7 @@
 
 // Media queries
 @media (min-width: 1024px) and (max-width: 1500px) {
-  .main__content section ul a.active__link li {
+  .sidebar section ul a.active__link li {
     background-color: rgba(57, 205, 204, 0.06);
     border-left: 3px solid rgba(57, 205, 204, 1);
     padding-top: 10px;
@@ -103,7 +94,7 @@
 }
 
 @media screen and (max-width: 900px) {
-  .main__content {
+  .sidebar {
     display: none;
   }
 
