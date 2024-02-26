@@ -1,10 +1,13 @@
-import React from 'react'
-import Router from './router/Router'
-
+import React from "react";
+import Router from "./router/Router";
+import { Toaster } from "react-hot-toast";
 const App = () => {
   return (
-    <Router/>
-  )
-}
+    <>
+      <Toaster />
+      <Router />
+    </>
+  );
+};
 
-export default App
+export default App;

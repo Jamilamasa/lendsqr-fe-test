@@ -1,8 +1,8 @@
 import React from "react";
 import logo from "../../assets/images/logo.svg";
 import { Link } from "react-router-dom";
-import usePasswordToggle from "../../hooks/utilityHooks";
-import { FORGOTPASSWORD } from "../../router/Router";
+import { usePasswordToggle } from "../../hooks/utilityHooks";
+import { FORGOTPASSWORD, ROOT } from "../../router/Router";
 import { Button, Input } from "../forms/FormInput";
 
 interface ILoginFormProps {
@@ -23,10 +23,16 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
         <h1 className={styles["login-form-header"]}>Welcome!</h1>
         <p className={styles["login-form-text"]}>Enter details to login.</p>
         {/* Form */}
-        <form>
+        <form onSubmit={(e)=>{
+          e.preventDefault()
+        }}>
+          <Input
+            type="email"
+            placeholder="Email"
+            id="email"
+            className={styles["login-form-input"]}
+          />
 
-            <Input type="email" placeholder="Email" id="email" className={styles["login-form-input"]}/>
-    
           <div className={styles["login-form-passwordInput"]}>
             <Input
               type={passwordInputType}
@@ -42,9 +48,9 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
             </p>
           </Link>
 
-          <Button type="submit" className={styles["login-form-submit"]}>
-            LOG IN
-          </Button>
+          
+            <Link to={ROOT}><Button type="submit" className={styles["login-form-submit"]}>LOG IN </Button></Link>
+         
         </form>
       </div>
     </div>

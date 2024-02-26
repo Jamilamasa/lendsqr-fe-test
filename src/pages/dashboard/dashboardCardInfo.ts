@@ -6,6 +6,7 @@ import usersWithSaving from "../../assets/icons/dashboard/iconuser_savings.svg";
 
 // Type for card information
 type CardInfo = {
+  id: number;
   icon: string;
   title: string;
   value: string;
@@ -14,23 +15,17 @@ type CardInfo = {
 // Card information
 export const cardInfo: CardInfo[] = [
   {
+    id: 1,
     icon: users,
     title: "Users",
-    value: "2,453"
+    value: "2,453",
   },
+  { id: 2, icon: activeUsers, title: "Active users", value: "2,452" },
+  { id: 3, icon: usersWithLoan, title: "Users with loans", value: "12,453" },
   {
-    icon: activeUsers,
-    title: "Active users",
-    value: "2,452"
-  },
-  {
-    icon: usersWithLoan,
-    title: "Users with loans",
-    value: "12,453"
-  },
-  {
+    id: 4,
     icon: usersWithSaving,
     title: "Users with savings",
-    value: "102,453"
+    value: "102,453",
   },
 ];

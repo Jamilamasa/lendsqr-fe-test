@@ -15,7 +15,7 @@ const PasswordToggle: React.FC<PasswordToggleProps> = ({ visible, toggleVisibili
   );
 };
 
-const usePasswordToggle = (): [InputType, JSX.Element] => {
+export const usePasswordToggle = (): [InputType, JSX.Element] => {
   const [visible, setVisible] = useState(false);
 
   const toggleVisibility = () => {
@@ -29,4 +29,4 @@ const usePasswordToggle = (): [InputType, JSX.Element] => {
   return [inputType, Icon];
 };
 
-export default usePasswordToggle;
+
