@@ -1,5 +1,23 @@
+// Fonts
 $primary-font: "Avenir Next", sans-serif;
+
+// Colors
+$background-color-light: #fbfbfb;
+$input-border:#545F7D26;
 $blue-color: #213F7D;
 $text-primary-color: #545F7D;
-$input-border:#545F7D26;
 $green-color:#39CDCC;
+
+// Spacing
+$spacing-xs: 5px;
+$spacing-sm: 10px;
+$spacing-md: 20px;
+$spacing-lg: 30px;
+
+// Input dimensions
+$input-height: 50px;
+$input-width: 447px;
+$input-width-mobile: 247px;
+
+// Breakpoints
+$breakpoint-md: 768px;

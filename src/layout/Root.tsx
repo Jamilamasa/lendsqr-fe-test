@@ -1,5 +1,5 @@
 import React from "react";
-import Header from "../components/rootComponents/Header";
+import Header from "../components/rootComponents/Header/Header";
 
 const Root = () => {
   return (

@@ -24,14 +24,15 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
         <p className={styles["login-form-text"]}>Enter details to login.</p>
         {/* Form */}
         <form>
-          <div className={styles["login-form-input"]}>
-            <Input type="email" placeholder="Email" id="email" />
-          </div>
-          <div className={styles["login-form-input"]}>
+
+            <Input type="email" placeholder="Email" id="email" className={styles["login-form-input"]}/>
+    
+          <div className={styles["login-form-passwordInput"]}>
             <Input
               type={passwordInputType}
               placeholder="Password"
               id="password"
+              className={styles["login-form-input"]}
             />
             {toggleIcon}
           </div>

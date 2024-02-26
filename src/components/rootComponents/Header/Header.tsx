@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./Header.module.scss";
-import logo from "../../assets/images/logo.svg";
-import { Button, Input } from "../forms/FormInput";
+import logo from "../../../assets/images/logo.svg";
+import { Button, Input } from "../../forms/FormInput";
 import { IoSearch } from "react-icons/io5";
 import { LiaBellSolid } from "react-icons/lia";
 import { MdArrowDropDown } from "react-icons/md";
 import { IconContext } from "react-icons";
-import avatar from "../../assets/images/avatar.png";
+import avatar from "../../../assets/images/avatar.png";
 
 const Header: React.FC = () => {
   return (
