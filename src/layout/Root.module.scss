@@ -1,0 +1,5 @@
+@import '../styles/mixins.scss';
+
+.root {
+    @include flexbox(column, initial, initial)
+}

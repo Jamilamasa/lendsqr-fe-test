@@ -1,26 +1,31 @@
+// Import global styles and variables
 @import "../../../styles/global.scss";
 @import "../../../styles/variables.scss";
-@import "../../../styles/variables.scss";
 
+// Define styles for the header component
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 60px 10px 40px;
-  box-shadow: 3px 0px 20px 0px #0000000a;
+  padding: $spacing-md $spacing-lg $spacing-md $spacing-md;
+  box-shadow: $box-shadow;
+
   &-logo {
     width: 8rem;
   }
+
   &-searchBar {
     display: flex;
     width: 400px;
     height: 40px;
+
     &-input {
       @extend .form-input;
       border-top-right-radius: 0;
       border-bottom-right-radius: 0;
       border-right: none;
     }
+
     &-submit {
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
@@ -28,31 +33,34 @@
       width: 56px;
     }
   }
+
   &-links {
     display: flex;
-    justify-content: center;
     align-items: center;
+
     a {
-      margin-right: 40px;
+      margin-right: $spacing-lg;
       text-decoration: underline;
       color: $blue-color;
       @extend .text-lg;
       text-align: left;
     }
+
     &-icon {
       font-size: 25px;
       color: $blue-color;
-      margin-right: 30px;
+      margin-right: $spacing-lg;
     }
+
     &-user {
       display: flex;
-      
       align-items: center;
+
       p {
-       @extend .text-lg;
+        @extend .text-lg;
         text-align: left;
         color: $blue-color;
-        margin-left: 9px;
+        margin-left: $spacing-xs;
       }
     }
   }

@@ -1,0 +1,25 @@
+import briefcase from '../../../assets/icons/sidebar/briefcase 1.svg'
+import badgepercent from '../../../assets/icons/sidebar/badge-percent 1.svg'
+import handholding from '../../../assets/icons/sidebar/hand-holding 1.svg'
+import handshake from '../../../assets/icons/sidebar/handshake-regular 1.svg'
+import galaxy from '../../../assets/icons/sidebar/galaxy 1.svg'
+import piggybank from '../../../assets/icons/sidebar/piggy-bank 1.svg'
+import clipboard from '../../../assets/icons/sidebar/clipboard-list 1.svg'
+import usertimes from '../../../assets/icons/sidebar/user-times 1.svg'
+import userfriends from '../../../assets/icons/sidebar/user-friends 1.svg'
+import usercheck from '../../../assets/icons/sidebar/user-check 1.svg'
+import users from '../../../assets/icons/sidebar/users 1.svg'
+import usersetting from '../../../assets/icons/sidebar/user-cog 1.svg'
+import sliders from '../../../assets/icons/sidebar/sliders-h 1.svg'
+import scroll from '../../../assets/icons/sidebar/scroll 1.svg'
+import sack from '../../../assets/icons/sidebar/sack 1 (1).svg'
+import npbank from '../../../assets/icons/sidebar/np_bank_148501_000000 1.svg'
+import home from '../../../assets/icons/sidebar/home 1.svg'
+import coins from '../../../assets/icons/sidebar/coins-solid 1.svg'
+import phone from '../../../assets/icons/sidebar/phone.svg'
+import barchart from '../../../assets/icons/sidebar/chart-bar 2.svg'
+import logout from '../../../assets/icons/dashboard/sign-out 1.svg'
+
+
+export { briefcase, badgepercent, handholding, handshake, galaxy, piggybank, clipboard, usertimes, userfriends, usercheck, users, usersetting, sliders, scroll, sack, npbank, home, coins, phone, barchart,logout }
+

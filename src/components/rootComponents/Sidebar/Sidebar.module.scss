@@ -1,0 +1,129 @@
+// Import shared styles and variables
+@import "../../../styles/variables.scss";
+
+// Define mixins
+@mixin FlexRow() {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar {
+  display: flex;
+  align-items: flex-start;
+  width: 100vw;
+  position: relative;
+  top: 10vh;
+  overflow-x: auto;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  width: 283px !important;
+  padding: 40px;
+  position: fixed;
+  overflow-y: auto;
+  top: 10vh;
+  bottom: 0;
+  font-family: "Work Sans", sans-serif;
+  background-color: white;
+  gap: 30px;
+  box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.04);
+
+  section {
+    h5 {
+      font-size: 12px;
+      text-transform: uppercase;
+      font-weight: 500;
+      color: $blue-color;
+      padding-left: 20px;
+    }
+
+    ul {
+      li {
+        width: 100%;
+        margin: 15px 0;
+        padding-left: 20px;
+        color: $text-primary-color;
+        font-size: 16px;
+        padding: 10px 0 10px 20px;
+        @include FlexRow();
+
+        img {
+          width: 16px;
+        }
+
+        p {
+          font-size: 16px;
+          color: $text-primary-color;
+          margin-left: 10px;
+        }
+      }
+    }
+  }
+
+  select {
+    background-color: none;
+    border: none;
+    color: $text-primary-color;
+    font-size: 16px;
+    background-image: url("../../assets/global/drop_down_unshaded.svg");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+
+  span {
+    color: $text-primary-color;
+    @include FlexRow();
+    gap: 30px;
+  }
+
+  section p,
+  span {
+    padding-left: 20px;
+  }
+
+  .last_section {
+    border-top: 1px solid lightgray;
+  }
+}
+
+// Media queries
+@media (min-width: 1024px) and (max-width: 1500px) {
+  .main__content section ul a.active__link li {
+    background-color: rgba(57, 205, 204, 0.06);
+    border-left: 3px solid rgba(57, 205, 204, 1);
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .main__content {
+    display: none;
+  }
+
+  .outlet {
+    left: 0;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbfbfb;
+  }
+
+  .shared {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    background-color: #fbfbfb;
+    position: relative;
+    top: 10vh;
+  }
+}
