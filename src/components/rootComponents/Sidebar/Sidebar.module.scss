@@ -7,10 +7,10 @@
   flex-direction: column;
   width: 283px !important;
   padding: 20px;
-  position: fixed;
+  flex: 1;
+
   overflow-y: auto;
-  top: 88px;
-  bottom: 0;
+  
   font-family: "Work Sans", sans-serif;
   background-color: white;
   gap: 30px;

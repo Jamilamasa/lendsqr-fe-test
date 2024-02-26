@@ -1,5 +1,15 @@
-@import '../styles/mixins.scss';
-
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
 .root {
-    @include flexbox(column, initial, initial)
+  @include flexbox(column, initial, initial);
+  height: 100vh;
+  &-body {
+    @include flexbox;
+    height: calc(100vh - 88px);
+    &-outlet {
+      background-color: $background-color-light;
+      flex: 5;
+      padding: 3.5rem;
+    }
+  }
 }

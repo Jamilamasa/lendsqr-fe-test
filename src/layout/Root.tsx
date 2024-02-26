@@ -15,7 +15,9 @@ const Root = () => {
       {/* Sidebar and Page */}
       <div className={styles["root-body"]}>
         <SideBar />
-        <Outlet/>
+        <div className={styles['root-body-outlet']}>
+          <Outlet />
+        </div>
       </div>
     </div>
   );

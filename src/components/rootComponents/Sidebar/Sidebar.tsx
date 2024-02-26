@@ -143,7 +143,7 @@ const SideBar: React.FC = () => {
             </ul>
           </section>
 
-          <section className={styles.last_section}>
+          <section className={styles['last_section']}>
             <ul>
               <Link to={"/"}>
                 <li>

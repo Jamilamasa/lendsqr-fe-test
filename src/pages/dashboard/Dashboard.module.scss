@@ -1,0 +1,18 @@
+@import "../../styles/typography";
+@import "../../styles/variables.scss";
+
+.dashboard {
+  &-header {
+    @extend .text-md;
+    font-weight: 500;
+    color: $blue-color;
+    text-align: left;
+    margin-bottom: 30px;
+  }
+  &-cards {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+  }
+}
