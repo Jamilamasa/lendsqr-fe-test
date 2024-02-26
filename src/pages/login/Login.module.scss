@@ -29,13 +29,15 @@
     @include center-div;
     align-items: flex-start;
     flex: 1;
-
+    &-logo {
+      display: none;
+    }
     &-container {
       margin: auto;
     }
 
     &-header {
-      @extend .text-lg;
+      @extend .text-xl;
       color: $blue-color;
       margin-bottom: 0.625rem;
     }
@@ -53,7 +55,7 @@
       margin-bottom: 20px;
 
       span {
-        @extend .text-md;
+        @extend .text-sm;
         position: absolute;
         right: 10px;
         top: 50%;
@@ -64,7 +66,7 @@
     }
 
     &-forgotPassword {
-      @extend .text-md;
+      @extend .text-sm;
       color: $green-color;
       margin: 30px 0;
     }
@@ -84,6 +86,12 @@
     &-form {
       padding: 20px;
       width: 100%;
+      &-logo {
+        display: block;
+        position: absolute;
+        top: 50px;
+        left: 50px;
+      }
       &-input {
         height: 50px;
         width: 247px;
@@ -91,7 +99,5 @@
         margin-bottom: 20px;
       }
     }
-   
-
   }
 }

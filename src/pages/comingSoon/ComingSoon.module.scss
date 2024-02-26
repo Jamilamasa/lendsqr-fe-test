@@ -14,11 +14,11 @@
 }
 
 .title {
-    @extend .text-lg;
+    @extend .text-xl;
     color: $green-color;
 }
 
 .description {
-   @extend .text-md;
+   @extend .text-sm;
    color: $text-primary-color;
 }
