@@ -1,10 +1,9 @@
-import React from "react";
+
 import styles from "./DashboardTable.module.scss";
 import filterIcon from '../../../assets/icons/table/filter-results-button.svg'
 
-type Props = {};
 
-const DashboardTable = (props: Props) => {
+const DashboardTable = () => {
   return (
     <div className={styles["table-container"]}>
       <table>

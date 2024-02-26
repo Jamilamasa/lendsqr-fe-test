@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import DashboardCard from "../../components/dashboard/card/DashboardCard";
 import DashboardTable from "../../components/dashboard/table/DashboardTable";
 import { useGetUsers } from "../../hooks/users.hooks";
@@ -6,7 +6,7 @@ import styles from "./Dashboard.module.scss";
 import { cardInfo } from "./dashboardCardInfo";
 
 const Dashboard = () => {
-  const { getUserData, loading, users, error } = useGetUsers();
+  const { getUserData } = useGetUsers();
 
   useEffect(() => {
     getUserData();

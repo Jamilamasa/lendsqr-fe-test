@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./DashboardCard.module.scss";
 import { IDashboardCardProps } from "./interfaces";
 

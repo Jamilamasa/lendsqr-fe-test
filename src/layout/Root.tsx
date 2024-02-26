@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Root.module.scss";
 import Header from "../components/rootComponents/Header/Header";
 import SideBar from "../components/rootComponents/Sidebar/Sidebar";

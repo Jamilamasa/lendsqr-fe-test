@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { getAllUsers } from "../services/users.services";
 import { toast } from "react-hot-toast";
 

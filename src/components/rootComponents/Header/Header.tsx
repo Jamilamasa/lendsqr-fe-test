@@ -1,4 +1,4 @@
-import React from "react";
+
 import styles from "./Header.module.scss";
 import logo from "../../../assets/images/logo.svg";
 import { Button, Input } from "../../forms/FormInput";

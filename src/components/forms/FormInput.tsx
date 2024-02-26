@@ -1,4 +1,4 @@
-import React from "react";
+
 import { IFormInputProps, IFormButtonProps } from "./interfaces";
 
 // Input component
