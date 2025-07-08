@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { setCookie } from "cookies-next";
+import { useState } from "react";
 
 interface ILoginFormProps {
   styles: {
@@ -12,21 +13,30 @@ interface ILoginFormProps {
   };
 }
 const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
+  // Form state
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const [passwordInputType, toggleIcon] = usePasswordToggle();
   const router = useRouter();
 
-  const submitHandler = (e) => {
-    // Generate a random token
-    const fakeToken = Math.random().toString(36).substring(2);
+ const submitHandler = (e: React.FormEvent) => {
+  e.preventDefault();
 
-    // Set cookie
-    setCookie("lsq9fac67pp", fakeToken, {
-      maxAge: 60 * 60 * 24,
-      path: "/",
-    });
-    // Redirect to dashboard
-    router.push("/");
-  };
+  if (!email || !password) {
+    alert("Please enter both email and password.");
+    return;
+  }
+
+  // Random bearer token
+  const fakeToken = Math.random().toString(36).substring(2);
+  setCookie("lsq9fac67pp", fakeToken, {
+    maxAge: 60 * 60 * 24,
+    path: "/",
+  });
+
+  router.push("/");
+};
+
   return (
     <div className={styles["login-form"]}>
       {/* Mobile Logo */}
@@ -43,21 +53,21 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
         <h1 className={styles["login-form-header"]}>Welcome!</h1>
         <p className={styles["login-form-text"]}>Enter details to login.</p>
         {/* Form */}
-        <form
-          onSubmit={submitHandler}
-        >
+        <form onSubmit={submitHandler}>
           <input
             type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
             placeholder="Email"
-            id="email"
             className={styles["login-form-input"]}
           />
 
           <div className={styles["login-form-passwordInput"]}>
             <input
               type={passwordInputType}
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
               placeholder="Password"
-              id="password"
               className={styles["login-form-input"]}
             />
             {toggleIcon}
