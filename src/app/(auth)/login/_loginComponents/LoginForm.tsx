@@ -15,7 +15,7 @@ const LoginForm: React.FC<ILoginFormProps> = ({ styles }) => {
   const [passwordInputType, toggleIcon] = usePasswordToggle();
   const router = useRouter();
 
-  const submitHandler = (e) => {
+  const submitHandler = () => {
     // Generate a random token
     const fakeToken = Math.random().toString(36).substring(2);
 
