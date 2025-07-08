@@ -1,0 +1,118 @@
+// Import global styles and variables
+// @import "../../../styles/global.scss";
+@use "../../../styles/_forms.scss";
+@use "../../../styles/variables.scss" as variables;
+@use "../../../styles/typography";
+@use "../../../styles/mixins.scss" as mixin;
+
+// Styles for the login page
+.login {
+  &-container {
+    display: flex;
+    height: 100vh;
+  }
+
+  // Illustration section styling
+  &-illustration {
+    background-color: variables.$background-color-light;
+    flex: 1;
+
+    &-container {
+      @include mixin.center-div;
+    }
+
+    &-logo {
+      position: absolute;
+      top: 106px;
+      left: 96px;
+    }
+  }
+
+  // Form section styling
+  &-form {
+    @include mixin.center-div;
+    align-items: flex-start;
+    flex: 1;
+
+    &-logo {
+      display: none;
+    }
+
+    &-container {
+      margin: auto;
+    }
+
+    &-header {
+      @extend .text-xl;
+      color: variables.$blue-color;
+      margin-bottom: variables.$spacing-xs;
+    }
+
+    &-text {
+      @extend .text-lg;
+      color: variables.$text-primary-color;
+      margin-bottom: variables.$spacing-2xl;
+    }
+
+    &-input {
+      @extend .form-input;
+      height: variables.$input-height;
+      width: variables.$input-width;
+      margin-bottom: variables.$spacing-md;
+    }
+
+    &-passwordInput {
+      position: relative;
+      height: variables.$input-height;
+      width: variables.$input-width;
+      margin-bottom: 24px;
+
+      span {
+        @extend .text-sm;
+        position: absolute;
+        right: variables.$spacing-sm;
+        top: 50%;
+        transform: translateY(-50%);
+        cursor: pointer;
+        color: variables.$green-color;
+      }
+    }
+
+    &-forgotPassword {
+      @extend .text-sm;
+      color: variables.$green-color;
+    }
+
+    &-submit {
+      width: 100%;
+      margin-top: variables.$spacing-lg !important;
+      height: variables.$input-height;
+    }
+  }
+
+  // Media query for mobile view
+  @media (max-width: variables.$breakpoint-md) {
+    &-illustration {
+      display: none;
+    }
+
+    &-form {
+      padding: variables.$spacing-md;
+      width: 100%;
+
+      &-logo {
+        display: block;
+        position: absolute;
+        top: variables.$spacing-md;
+        left: variables.$spacing-md;
+      }
+
+      &-input {
+        width: variables.$input-width-mobile;
+      }
+      &-passwordInput {
+        width: variables.$input-width-mobile;
+      }
+    }
+  }
+}

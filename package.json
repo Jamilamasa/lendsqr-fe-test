@@ -8,13 +8,13 @@
     "start": "next start",
     "lint": "next lint",
     "test": "jest",
-      "test:watch": "jest --watch"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
+    "cookies-next": "^6.0.0",
     "next": "15.3.5",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "sass": "^1.89.2"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
@@ -29,6 +29,7 @@
     "eslint-config-next": "15.3.5",
     "jest": "^30.0.4",
     "jest-environment-jsdom": "^30.0.4",
+    "sass": "^1.89.2",
     "ts-node": "^10.9.2",
     "typescript": "^5"
   }
